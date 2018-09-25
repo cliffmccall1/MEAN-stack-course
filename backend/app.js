@@ -10,7 +10,9 @@ const app = express();
 
 mongoose
   .connect(
-    'mongodb+srv://cliff:mAVNOvKueNfPsIxx@mean-course-1dhzh.mongodb.net/node-angular',
+    'mongodb+srv://cliff:' +
+      process.env.MONGO_ATLAS_PW +
+      '@mean-course-1dhzh.mongodb.net/node-angular',
     { useNewUrlParser: true }
   )
   .then(() => {
